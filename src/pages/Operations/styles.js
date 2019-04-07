@@ -6,17 +6,18 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   mainContainer: {
-    height: 284,
-    width: 330,
+    height: 300,
+
     backgroundColor: "#FFF",
     alignItems: "center",
-    paddingTop: 15,
-    borderRadius: 30
+    padding: 15,
+    borderRadius: 30,
+    justifyContent: "space-around"
   },
   title: { fontSize: 17, fontWeight: "bold" },
   reorderData: {
     height: 50,
-    width: 330,
+    width: 300,
     borderRadius: 50,
     borderWidth: 1,
     borderColor: "#cecece",
@@ -30,11 +31,12 @@ const styles = StyleSheet.create({
   buttonPost: {
     height: 50,
     backgroundColor: "#00D8D6",
-    width: 330,
+    width: 300,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center"
-  }
+  },
+  textButton: { color: "#FFF", fontSize: 18, fontWeight: "bold" }
 });
 
 export default styles;
