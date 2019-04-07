@@ -4,7 +4,8 @@ import { colors, metrics } from "../../styles";
 const styles = StyleSheet.create({
   comtainer: {
     flex: 1,
-    alignItems: "center"
+    alignItems: "center",
+    fontFamily: "Heebo"
   },
   dayContainer: {
     height: 180,

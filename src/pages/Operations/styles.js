@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   comtainer: {
     flex: 1,
-    alignItems: "center"
+    alignItems: "center",
+    fontFamily: "Heebo"
   },
   mainContainer: {
     height: 300,

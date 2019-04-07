@@ -57,6 +57,13 @@
 		9F267B6618E84068A02D15CD /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8F1808F32EE4557B75C6232 /* Zocial.ttf */; };
 		2E784392C5E947E38E822DFE /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1327523F1F840B5A4E998F2 /* libRNVectorIcons.a */; };
 		B13E6C134CAD427E80C0519F /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E540FA0EB4A0AA7F16684 /* libRNVectorIcons-tvOS.a */; };
+		756C9A734C8C45FE93E3EA9C /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5C12181184449DF91C8D939 /* Heebo-Black.ttf */; };
+		960F9D52B4F441659675762F /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96245033386649AAA39A9DD6 /* Heebo-Bold.ttf */; };
+		D462042F24434B05AE5BA5F1 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B703D4F53754286AC9C3C87 /* Heebo-ExtraBold.ttf */; };
+		91B6927CC3C24724BDB7ECF4 /* Heebo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7ACE834B247708A7DE0EB /* Heebo-Light.ttf */; };
+		93657088311B434786972314 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F8331FBDA4FF99D206056 /* Heebo-Medium.ttf */; };
+		F7F8B6649AD64722A762410D /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCA75E59773B43A39A523005 /* Heebo-Regular.ttf */; };
+		D6451E12B4B64DC8891FBB12 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6597BDC5C02B43BC888ADBF6 /* Heebo-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +391,13 @@
 		25AC2875C2BD43349DF55A47 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		C1327523F1F840B5A4E998F2 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		DE9E540FA0EB4A0AA7F16684 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; name = "libRNVectorIcons-tvOS.a"; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F5C12181184449DF91C8D939 /* Heebo-Black.ttf */ = {isa = PBXFileReference; name = "Heebo-Black.ttf"; path = "../src/assets/fonts/Heebo-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96245033386649AAA39A9DD6 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; name = "Heebo-Bold.ttf"; path = "../src/assets/fonts/Heebo-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2B703D4F53754286AC9C3C87 /* Heebo-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Heebo-ExtraBold.ttf"; path = "../src/assets/fonts/Heebo-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0DD7ACE834B247708A7DE0EB /* Heebo-Light.ttf */ = {isa = PBXFileReference; name = "Heebo-Light.ttf"; path = "../src/assets/fonts/Heebo-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F9F8331FBDA4FF99D206056 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; name = "Heebo-Medium.ttf"; path = "../src/assets/fonts/Heebo-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DCA75E59773B43A39A523005 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; name = "Heebo-Regular.ttf"; path = "../src/assets/fonts/Heebo-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6597BDC5C02B43BC888ADBF6 /* Heebo-Thin.ttf */ = {isa = PBXFileReference; name = "Heebo-Thin.ttf"; path = "../src/assets/fonts/Heebo-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -672,6 +686,13 @@
 				03610092E01748EDB15DC21A /* Octicons.ttf */,
 				FF6BC4541EAB4A6687ED2A2A /* SimpleLineIcons.ttf */,
 				F8F1808F32EE4557B75C6232 /* Zocial.ttf */,
+				F5C12181184449DF91C8D939 /* Heebo-Black.ttf */,
+				96245033386649AAA39A9DD6 /* Heebo-Bold.ttf */,
+				2B703D4F53754286AC9C3C87 /* Heebo-ExtraBold.ttf */,
+				0DD7ACE834B247708A7DE0EB /* Heebo-Light.ttf */,
+				2F9F8331FBDA4FF99D206056 /* Heebo-Medium.ttf */,
+				DCA75E59773B43A39A523005 /* Heebo-Regular.ttf */,
+				6597BDC5C02B43BC888ADBF6 /* Heebo-Thin.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1138,6 +1159,13 @@
 				B6C8D4B1325946F8A87634D3 /* Octicons.ttf in Resources */,
 				CAAA9C76F7F6474CB149FE9E /* SimpleLineIcons.ttf in Resources */,
 				9F267B6618E84068A02D15CD /* Zocial.ttf in Resources */,
+				756C9A734C8C45FE93E3EA9C /* Heebo-Black.ttf in Resources */,
+				960F9D52B4F441659675762F /* Heebo-Bold.ttf in Resources */,
+				D462042F24434B05AE5BA5F1 /* Heebo-ExtraBold.ttf in Resources */,
+				91B6927CC3C24724BDB7ECF4 /* Heebo-Light.ttf in Resources */,
+				93657088311B434786972314 /* Heebo-Medium.ttf in Resources */,
+				F7F8B6649AD64722A762410D /* Heebo-Regular.ttf in Resources */,
+				D6451E12B4B64DC8891FBB12 /* Heebo-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

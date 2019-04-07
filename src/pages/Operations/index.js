@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Text, View, ImageBackground, TouchableOpacity } from "react-native";
 import { Slider, CheckBox, Avatar } from "react-native-elements";
+import api from "../../services/api";
+import { colors, metrics } from "../../styles";
 import imgMap from "../../images/map.png";
 import styles from "./styles";
 
@@ -9,6 +11,16 @@ export class Operations extends Component {
     value: 0,
     checked: false
   };
+
+  sendSMS = () => {
+    this.setState({
+      checked: true
+    });
+    api.post({
+      phoneNumber: "+5511971801555"
+    });
+  };
+
   render() {
     return (
       <ImageBackground source={imgMap} style={styles.comtainer}>
@@ -25,12 +37,21 @@ export class Operations extends Component {
           </Text>
 
           <View
-            style={{ flex: 1, alignItems: "stretch", justifyContent: "center" }}
+            style={{
+              flex: 1,
+              alignItems: "stretch",
+              justifyContent: "center",
+              alignItems: "center",
+              width: metrics.screenWidth
+            }}
           >
             <Slider
               thumbTintColor="#00D8D6"
+              minimumValue={0}
+              maximumValue={150}
               value={this.state.value}
               onValueChange={value => this.setState({ value })}
+              style={{ width: metrics.screenWidth - 60 }}
             />
             <Text>Value: {this.state.value}</Text>
           </View>
@@ -75,11 +96,7 @@ export class Operations extends Component {
             checkedIcon="dot-circle-o"
             checked={this.state.checked}
             checkedColor="green"
-            onPress={() =>
-              this.setState({
-                checked: true
-              })
-            }
+            onPress={() => this.sendSMS}
           />
         </View>
       </ImageBackground>
