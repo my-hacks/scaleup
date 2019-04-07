@@ -31,10 +31,12 @@ export class Planner extends Component {
                 style={{
                   width: "30%",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
+                  position: "relative"
                 }}
               >
                 <Image source={terno} />
+                <Text style={styles.trackNumber}>3</Text>
               </View>
               <View style={{ width: "60%" }}>
                 <Text style={{ fontSize: 19, fontWeight: "bold" }}>
@@ -98,10 +100,12 @@ export class Planner extends Component {
                     style={{
                       width: "30%",
                       alignItems: "center",
-                      justifyContent: "center"
+                      justifyContent: "center",
+                      position: "relative"
                     }}
                   >
                     <Image source={terno} />
+                    <Text style={styles.trackNumber}>5</Text>
                   </View>
                   <View style={{ width: "60%" }}>
                     <Text style={{ fontSize: 19, fontWeight: "bold" }}>

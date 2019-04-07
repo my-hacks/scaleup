@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Text, View, ImageBackground, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+  Alert
+} from "react-native";
 import { Slider, CheckBox, Avatar } from "react-native-elements";
 import api from "../../services/api";
 import { colors, metrics } from "../../styles";
@@ -7,18 +13,67 @@ import imgMap from "../../images/map.png";
 import styles from "./styles";
 
 export class Operations extends Component {
-  state = {
-    value: 0,
-    checked: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      valor: 0,
+      checked: false,
+      checked1: false,
+      checked2: false
+    };
+  }
 
   sendSMS = () => {
     this.setState({
-      checked: true
+      checked: !this.state.checked
     });
-    api.post({
-      phoneNumber: "+5511971801555"
+
+    let data = {
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json"
+      },
+      method: "post",
+      body: JSON.stringify({
+        phoneNumber: `+5511971801555`
+      })
+    };
+    fetch(
+      "http://node-express-scaleup.pzvdeedvjc.sa-east-1.elasticbeanstalk.com/send_sms",
+      data
+    )
+      .then(response => response.json())
+      .then(responseData => Alert.alert(JSON.stringify(responseData)))
+      .catch(err => console.log("erro", err));
+  };
+
+  sendSMS1 = () => {
+    this.setState({
+      checked1: !this.state.checked1
     });
+
+    let data = {
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json"
+      },
+      method: "post",
+      body: JSON.stringify({
+        phoneNumber: `+5511997963602`
+      })
+    };
+    fetch(
+      "http://node-express-scaleup.pzvdeedvjc.sa-east-1.elasticbeanstalk.com/send_sms",
+      data
+    )
+      .then(response => response.json())
+      .then(responseData => Alert.alert(JSON.stringify(responseData)))
+      .catch(err => console.log("erro", err));
+  };
+
+  sendAllMessages = () => {
+    this.sendSMS();
+    this.sendSMS1();
   };
 
   render() {
@@ -49,14 +104,18 @@ export class Operations extends Component {
               thumbTintColor="#00D8D6"
               minimumValue={0}
               maximumValue={150}
-              value={this.state.value}
-              onValueChange={value => this.setState({ value })}
+              step={1}
+              value={this.state.valor}
+              onValueChange={value => this.setState({ valor: value })}
               style={{ width: metrics.screenWidth - 60 }}
             />
-            <Text>Value: {this.state.value}</Text>
+            <Text>Value: {this.state.valor}</Text>
           </View>
 
-          <TouchableOpacity style={styles.buttonPost}>
+          <TouchableOpacity
+            style={styles.buttonPost}
+            onPress={() => this.sendAllMessages}
+          >
             <Text style={styles.textButton}>Enviar Mudanças</Text>
           </TouchableOpacity>
         </View>
@@ -96,7 +155,84 @@ export class Operations extends Component {
             checkedIcon="dot-circle-o"
             checked={this.state.checked}
             checkedColor="green"
-            onPress={() => this.sendSMS}
+            onPress={this.sendSMS}
+          />
+        </View>
+
+        <View
+          style={{
+            height: 60,
+            width: "85%",
+            backgroundColor: "#FFF",
+            marginTop: 15,
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center"
+          }}
+        >
+          <View
+            style={{
+              width: "70%",
+              height: 30,
+              flexDirection: "row",
+              alignItems: "center"
+            }}
+          >
+            <Avatar
+              small
+              rounded
+              source={{
+                uri:
+                  "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
+              }}
+              activeOpacity={0.7}
+            />
+            <Text style={{ marginLeft: 20 }}>Igor Heldfeld</Text>
+          </View>
+          <CheckBox
+            center
+            checkedIcon="dot-circle-o"
+            checked={this.state.checked2}
+            checkedColor="green"
+          />
+        </View>
+
+        <View
+          style={{
+            height: 60,
+            width: "85%",
+            backgroundColor: "#FFF",
+            marginTop: 15,
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center"
+          }}
+        >
+          <View
+            style={{
+              width: "70%",
+              height: 30,
+              flexDirection: "row",
+              alignItems: "center"
+            }}
+          >
+            <Avatar
+              small
+              rounded
+              source={{
+                uri:
+                  "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
+              }}
+              activeOpacity={0.7}
+            />
+            <Text style={{ marginLeft: 20 }}>Igor Heldfeld</Text>
+          </View>
+          <CheckBox
+            center
+            checkedIcon="dot-circle-o"
+            checked={this.state.checked1}
+            checkedColor="green"
+            onPress={this.sendSMS1}
           />
         </View>
       </ImageBackground>

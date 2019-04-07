@@ -30,7 +30,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#cecece"
+    borderColor: "#cecece",
+    position: "relative"
+  },
+  trackNumber: {
+    color: colors.base,
+    fontSize: 20,
+    position: "absolute",
+    top: -12,
+    right: 30,
+    fontWeight: "bold"
   },
   schedule1: {
     height: 110,
