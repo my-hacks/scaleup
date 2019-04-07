@@ -4,7 +4,8 @@ import {
   View,
   ImageBackground,
   TouchableOpacity,
-  Alert
+  Alert,
+  AsyncStorage
 } from "react-native";
 import { Slider, CheckBox, Avatar } from "react-native-elements";
 import api from "../../services/api";
@@ -71,9 +72,10 @@ export class Operations extends Component {
       .catch(err => console.log("erro", err));
   };
 
-  sendAllMessages = () => {
-    this.sendSMS();
-    this.sendSMS1();
+  sendAllMessages = async () => {
+    // this.sendSMS();
+    // this.sendSMS1();
+    store.toggle();
   };
 
   render() {
