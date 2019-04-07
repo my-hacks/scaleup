@@ -9,7 +9,6 @@ export class Operations extends Component {
     value: 0,
     checked: false
   };
-
   render() {
     return (
       <ImageBackground source={imgMap} style={styles.comtainer}>
